@@ -25,9 +25,9 @@ public class ImperialShip extends Spaceship
 		return "Pkchew!";
 	}
 	
-	public String toString()
+	/*public String toString()
 	{
-		return getSpaceShipSpecs();
-	}
+		return null;
+	}*/
 
 }

@@ -1,4 +1,4 @@
-
+// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 public abstract class Spaceship 
 {
 	private String Name;
@@ -18,17 +18,31 @@ public abstract class Spaceship
 		Name = shipName;
 		Speed = maxSpeed;
 	}
+	
+	public void setSpaceShipName(String shipName)
+	{
+		Name = shipName;
+	}
+	
+	public void setSpaceShipMaxSpeed(double maxSpeed)
+	{
+		Speed = maxSpeed;
+	}
 
 	public void setSpaceShipSpecs(String shipName, double maxSpeed)
 	{
 		Name = shipName;
 		Speed = maxSpeed;
-		// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 	}
 	
-	public String getSpaceShipSpecs()
+	public String getSpaceShipName()
 	{
-		return Name + " " + Speed;
+		return Name;
+	}
+	
+	public double getSpaceShipMaxSpeed()
+	{
+		return Speed;
 	}
 	
 	public void setPilotName(String pilotName)
