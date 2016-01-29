@@ -9,10 +9,31 @@ public class RebelShip extends Spaceship
 		setSpaceShipSpecs(shipName, maxSpeed);
 	}
 	
+	public void setRebelWingConfig(String wingConfig)
+	{
+		wings = wingConfig;
+	}
+	
+	public void setRebelDroidName(String droidName)
+	{
+		droid = droidName;
+	}
+	
+	//outdated
 	public void setRebelSpecifics(String wingConfig, String droidName)
 	{
 		wings = wingConfig;
 		droid = droidName;
+	}
+	
+	public String getRebelWingConfiguration()
+	{
+		return wings;
+	}
+	
+	public String getRebelDroidName()
+	{
+		return droid;
 	}
 		
 	public String firePrimaryWeapon()
@@ -22,7 +43,7 @@ public class RebelShip extends Spaceship
 	
 	public String toString()
 	{
-		return wings + "" + droid;
+		return "Ship Name: " + getSpaceShipName() + "\n" + "Ship Max Speed: " + getSpaceShipMaxSpeed() + "\n" + "Ship Pilot: " + getPilotName() + "\n" + "Ship Shield Status: " + getShieldStatus() + "\n" + "Rebel Ship Wing Configuration: " + getRebelWingConfiguration() + "\n" + "Rebel Ship Astro Droid Name: " + getRebelDroidName();
 	}
 
 }

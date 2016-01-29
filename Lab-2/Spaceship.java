@@ -1,75 +1,76 @@
 // http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
+
 public abstract class Spaceship 
 {
-	private String Name;
-	private double Speed;
-	private String Pilot;
-	private String Status;
+	private String name;
+	private double speed;
+	private String pilot;
+	private String status;
 	
 	
 	public Spaceship()
 	{
-		Name = "";
-		Speed = 0;
+		name = "";
+		speed = 0;
 	}
 	
 	public Spaceship(String shipName, double maxSpeed)
 	{
-		Name = shipName;
-		Speed = maxSpeed;
-	}
-	
-	public void setSpaceShipName(String shipName)
-	{
-		Name = shipName;
-	}
-	
-	public void setSpaceShipMaxSpeed(double maxSpeed)
-	{
-		Speed = maxSpeed;
+		name = shipName;
+		speed = maxSpeed;
 	}
 
 	public void setSpaceShipSpecs(String shipName, double maxSpeed)
 	{
-		Name = shipName;
-		Speed = maxSpeed;
+		name = shipName;
+		speed = maxSpeed;
+		// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 	}
 	
+	public void setSpaceShipSpeed(double maxSpeed)
+	{
+		speed = maxSpeed;
+	}
+	
+	public void setSpaceShipName(String shipName)
+	{
+		name = shipName;
+	}
 	public String getSpaceShipName()
 	{
-		return Name;
+		return name;
 	}
 	
 	public double getSpaceShipMaxSpeed()
 	{
-		return Speed;
+		return speed;
 	}
 	
 	public void setPilotName(String pilotName)
 	{
-		Pilot = pilotName;
+		pilot = pilotName;
 	}
 	
 	public String getPilotName()
 	{
-		return Pilot;
+		return pilot;
 	}
 	
 	public void setShieldStatus(String shieldStatus)
 	{
-		Status = shieldStatus;
+		status = shieldStatus;
 	}
 	
 	public String getShieldStatus()
 	{
-		return Status;
+		return status;
 	}
 	
 	abstract public String firePrimaryWeapon();
 	
 	public String toString()
 	{
-		return "Ship Name: " + Name + "\n" + "Ship Max Speed: " + Speed + "\n" + "Ship Pilot: " + Pilot + "\n" + "Shield Status: " + Status;
+		return "Ship Name: " + name + "\n" + "Ship Max Speed: " + speed + "\n" + "Ship Pilot: " + pilot + "\n" + "Shield Status: " + status;
 	}
 
 }

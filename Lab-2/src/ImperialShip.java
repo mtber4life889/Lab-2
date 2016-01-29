@@ -7,6 +7,16 @@ public class ImperialShip extends Spaceship
 	public ImperialShip(String shipName, double maxSpeed)
 	{
 		setSpaceShipSpecs(shipName, maxSpeed);
+	}	
+	
+	public void setImperialSubType(String subType)
+	{
+		type = subType;
+	}
+	
+	public void setImperialWeaponry(String secondaryWeaponry)
+	{
+		weaponry = secondaryWeaponry;
 	}
 	
 	public void setImperialSpecifics(String subType, String secondaryWeaponry)
@@ -15,9 +25,20 @@ public class ImperialShip extends Spaceship
 		weaponry = secondaryWeaponry;
 	}
 	
-	public String getImperialSpecifics(String subType, String secondaryWeaponry)
+	//outdated
+	public String getImperialSpecifics()
 	{
 		return type + weaponry;
+	}
+	
+	public String getImperialSubType()
+	{
+		return type;
+	}
+	
+	public String getImperialWeaponry()
+	{
+		return weaponry;
 	}
 	
 	public String firePrimaryWeapon()
@@ -25,9 +46,14 @@ public class ImperialShip extends Spaceship
 		return "Pkchew!";
 	}
 	
-	/*public String toString()
+	public String fireSecondaryWeapon()
 	{
-		return null;
-	}*/
+		return "Firing Imperial Ships Secondary Weaponry!!";
+	}
+	
+	public String toString()
+	{
+		return "Ship Name: " + getSpaceShipName() + "\n" + "Ship Max Speed: " + getSpaceShipMaxSpeed() + "\n" + "Ship Pilot: " + getPilotName() + "\n" + "Ship Shield Status: " + getShieldStatus() + "\n" + "Imperial Ship SubType: " + getImperialSubType() + "\n" + "Imperial Secondary Weaponry: " + getImperialWeaponry();
+	}
 
 }

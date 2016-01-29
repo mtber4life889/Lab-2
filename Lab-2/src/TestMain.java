@@ -36,18 +36,39 @@ public class TestMain {
 		Ywing.setShieldStatus("down");
 		Bwing.setShieldStatus("up");
 		
+		//A wrong Imperial Specific
+		Advanced.setImperialSubType("sky guy go fly");
+		Advanced.setImperialWeaponry("space magic");
+		System.out.println("(Testing setImperialSubType + setImperialWeaponry)" + "\n" + "Imperial Ship Subtype: " + Advanced.getImperialSubType() + "\n" + "(Testing getImperialWeaponry)" + "\n" + "Imperial Secondary Weaponry: " + Advanced.getImperialWeaponry() + "\n");
+		
 		//Imperial Specifics
 		Advanced.setImperialSpecifics("fighter", "Force control");
 		Starfighter.setImperialSpecifics("fighter", null);
 		Bomber.setImperialSpecifics("bomber", "proton bomb");
 		Interceptor.setImperialSpecifics("fighter", "quad laser cannons");
 		
+		//A wrong Rebel Specific
+		Ywing.setRebelWingConfig("sideways");
+		Ywing.setRebelDroidName("r3-d1");
+		//outdated//Ywing.setRebelSpecifics("sideways", "r3-d1");
+		System.out.println("(Testing setRebelDroidName + setRebelWingConfiguration)" + "\n" + "Rebel Ship Wing Config: " + Ywing.getRebelWingConfiguration() + "\n" + "(Testing getRebelDroidName)" + "\n" + "Rebel Astro Droid Name: " + Ywing.getRebelDroidName() + "\n");
+		
 		//Rebel Specifics
 		Xwing.setRebelSpecifics("split", "R5-D1");
 		Ywing.setRebelSpecifics("fixed", "R3-D9");
 		Bwing.setRebelSpecifics("rotating", "R4-D3");
 		
-		System.out.println(Bomber.toString());
+		//Imperial ship test
+		System.out.println("(Testing toString of Imperial Ship)" + "\n" + Advanced.toString());
+		System.out.println("\n" + "(Testing firePrimaryWeapon of Imperial Ship)" + "\n" + "Firing Imperial Ships Primary Weapon!!" + "\n" + Advanced.firePrimaryWeapon());
+		
+		//Rebel ship test
+		System.out.println("\n" + "(Testing toString of Rebel Ship)" + "\n" + Ywing.toString());
+		System.out.println("\n" + "(Testing firePrimaryWeapon of Rebel Ship)" + "\n" + "Firing Rebel Ships Primary Weapon!!" + "\n" + Ywing.firePrimaryWeapon());
+		
+		//
+		Spaceship nothing = new ImperialShip("ur mum", 420);
+		System.out.println(nothing.firePrimaryWeapon());
 
 	}
 
