@@ -25,7 +25,7 @@ public class ImperialShip extends Spaceship
 		weaponry = secondaryWeaponry;
 	}
 	
-	//outdated
+	//out-dated
 	public String getImperialSpecifics()
 	{
 		return type + weaponry;

@@ -19,7 +19,7 @@ public class RebelShip extends Spaceship
 		droid = droidName;
 	}
 	
-	//outdated
+	//out-dated
 	public void setRebelSpecifics(String wingConfig, String droidName)
 	{
 		wings = wingConfig;

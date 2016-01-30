@@ -50,7 +50,6 @@ public class TestMain {
 		//A wrong Rebel Specific
 		Ywing.setRebelWingConfig("sideways");
 		Ywing.setRebelDroidName("r3-d1");
-		//outdated//Ywing.setRebelSpecifics("sideways", "r3-d1");
 		System.out.println("(Testing setRebelDroidName + setRebelWingConfiguration)" + "\n" + "Rebel Ship Wing Config: " + Ywing.getRebelWingConfiguration() + "\n" + "(Testing getRebelDroidName)" + "\n" + "Rebel Astro Droid Name: " + Ywing.getRebelDroidName() + "\n");
 		
 		//Rebel Specifics
