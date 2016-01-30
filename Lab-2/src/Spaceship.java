@@ -1,61 +1,76 @@
+// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 
 public abstract class Spaceship 
 {
-	protected String Name;
-	protected double Speed;
-	private String Pilot;
-	private String Status;
+	private String name;
+	private double speed;
+	private String pilot;
+	private String status;
 	
 	
 	public Spaceship()
 	{
-		Name = "";
-		Speed = 0;
+		name = "";
+		speed = 0;
 	}
 	
 	public Spaceship(String shipName, double maxSpeed)
 	{
-		Name = shipName;
-		Speed = maxSpeed;
+		name = shipName;
+		speed = maxSpeed;
 	}
 
 	public void setSpaceShipSpecs(String shipName, double maxSpeed)
 	{
-		Name = shipName;
-		Speed = maxSpeed;
+		name = shipName;
+		speed = maxSpeed;
 		// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 	}
 	
-	public String getSpaceShipSpecs()
+	public void setSpaceShipSpeed(double maxSpeed)
 	{
-		return Name + " " + Speed;
+		speed = maxSpeed;
+	}
+	
+	public void setSpaceShipName(String shipName)
+	{
+		name = shipName;
+	}
+	public String getSpaceShipName()
+	{
+		return name;
+	}
+	
+	public double getSpaceShipMaxSpeed()
+	{
+		return speed;
 	}
 	
 	public void setPilotName(String pilotName)
 	{
-		Pilot = pilotName;
+		pilot = pilotName;
 	}
 	
 	public String getPilotName()
 	{
-		return Pilot;
+		return pilot;
 	}
 	
 	public void setShieldStatus(String shieldStatus)
 	{
-		Status = shieldStatus;
+		status = shieldStatus;
 	}
 	
 	public String getShieldStatus()
 	{
-		return Status;
+		return status;
 	}
 	
 	abstract public String firePrimaryWeapon();
 	
 	public String toString()
 	{
-		return "Ship Name: " + Name + "\n" + "Ship Max Speed: " + Speed + "\n" + "Ship Pilot: " + Pilot + "\n" + "Shield Status: " + Status;
+		return "Ship Name: " + name + "\n" + "Ship Max Speed: " + speed + "\n" + "Ship Pilot: " + pilot + "\n" + "Shield Status: " + status;
 	}
 
 }
