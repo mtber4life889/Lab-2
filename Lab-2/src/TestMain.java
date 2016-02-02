@@ -59,15 +59,21 @@ public class TestMain {
 		
 		//Imperial ship test
 		System.out.println("(Testing toString of Imperial Ship)" + "\n" + Advanced.toString());
-		System.out.println("\n" + "(Testing firePrimaryWeapon of Imperial Ship)" + "\n" + "Firing Imperial Ships Primary Weapon!!" + "\n" + Advanced.firePrimaryWeapon());
+		System.out.println("\n" + "(Testing firePrimaryWeapon of Imperial Ship)" + "\n" + Advanced.firePrimaryWeapon());
 		
 		//Rebel ship test
 		System.out.println("\n" + "(Testing toString of Rebel Ship)" + "\n" + Ywing.toString());
-		System.out.println("\n" + "(Testing firePrimaryWeapon of Rebel Ship)" + "\n" + "Firing Rebel Ships Primary Weapon!!" + "\n" + Ywing.firePrimaryWeapon());
+		System.out.println("\n" + "(Testing firePrimaryWeapon of Rebel Ship)" + "\n" + Ywing.firePrimaryWeapon());
 		
 		//
-		Spaceship nothing = new ImperialShip("ur mum", 420);
-		System.out.println(nothing.firePrimaryWeapon());
+		Spaceship Enterprise;
+		Enterprise = new ImperialShip("Enterprise", 10);
+		System.out.println("\n" + "(testing polymorphism)" + "\n" + Enterprise.firePrimaryWeapon());
+		Enterprise = new RebelShip("Ze Enterprise", 10);
+		System.out.println(Enterprise.firePrimaryWeapon());
+		
+		System.out.println(Starfighter.fireSecondaryWeapon());
+		System.out.println(Advanced.fireSecondaryWeapon());
 
 	}
 
