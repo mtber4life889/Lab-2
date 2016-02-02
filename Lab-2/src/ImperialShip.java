@@ -52,7 +52,7 @@ public class ImperialShip extends Spaceship
 	{
 		if(weaponry != null && weaponry != "")
 		{
-			return "Firing " + getSpaceShipName() + " Secondary Weaponry!!";
+			return "Firing " + getSpaceShipName() + "'s Secondary Weaponry!!";
 		}
 		else
 		{

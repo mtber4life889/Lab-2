@@ -1,17 +1,18 @@
-// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 
 public abstract class Spaceship 
 {
 	private String name;//holds ship name
 	private double speed;//holds max speed
-	private String pilot;//holds pilot name
-	private String status;//holds shield status
+	private String pilot = "";//holds pilot name
+	private String status = "";//holds shield status
 	
 	//Default constructor
 	public Spaceship()
 	{
 		name = "";
 		speed = 0;
+		pilot = "";
+		status = "";
 	}
 	
 	//Constructor
@@ -19,6 +20,8 @@ public abstract class Spaceship
 	{
 		name = shipName;
 		speed = maxSpeed;
+		pilot = "";
+		status = "";
 	}
 
 	//Used in ImperialShip and RebelShip to simplify the constructors
@@ -26,7 +29,6 @@ public abstract class Spaceship
 	{
 		name = shipName;
 		speed = maxSpeed;
-		// http://stackoverflow.com/questions/18140964/return-different-type-of-data-from-a-method-in-java
 	}
 	
 	//Used to set a Spaceships Max Speed

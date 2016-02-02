@@ -4,10 +4,17 @@ public class TestMain {
 	public static void main(String[] args) {
 		
 		//Imperial Ships
-		ImperialShip Advanced = new ImperialShip("prototype TIE advanced", 8);
+		ImperialShip Advanced = new ImperialShip("prototype TIE Advanced", 8);
 		ImperialShip Starfighter = new ImperialShip("TIE Starfighter", 8);
 		ImperialShip Bomber = new ImperialShip("TIE Bomber", 5.7);
-		ImperialShip Interceptor = new ImperialShip("TIE Interceptor", 8.3);
+		
+		//Wrong Imperial Ship to test Spaceship Methods
+		ImperialShip Interceptor = new ImperialShip("tye Interceptor", 7);
+		System.out.println("(testing Spaceship setSpaceShipName + setSpaceShipMaxSpeed)" + "\n" + "Ship Name: " + Interceptor.getSpaceShipName() + "\n" + "Ship Max Speed: " + Interceptor.getSpaceShipMaxSpeed() + "\n");
+		Interceptor.setSpaceShipName("TIE Interceptor");
+		Interceptor.setSpaceShipSpeed(8.3);
+		System.out.println("(correcting using the mentioned methods)" + "\n" + "Ship Name: " + Interceptor.getSpaceShipName() + "\n" + "Ship Max Speed: " + Interceptor.getSpaceShipMaxSpeed() + "\n");
+		
 		
 		//Rebel Ships
 		RebelShip Xwing = new RebelShip("X-wing", 7);
@@ -39,7 +46,7 @@ public class TestMain {
 		//A wrong Imperial Specific
 		Advanced.setImperialSubType("sky guy go fly");
 		Advanced.setImperialWeaponry("space magic");
-		System.out.println("(Testing setImperialSubType + setImperialWeaponry)" + "\n" + "Imperial Ship Subtype: " + Advanced.getImperialSubType() + "\n" + "(Testing getImperialWeaponry)" + "\n" + "Imperial Secondary Weaponry: " + Advanced.getImperialWeaponry() + "\n");
+		System.out.println("(Testing setImperialSubType + setImperialWeaponry with wrong input to correct later using setImperialSpecifics)" + "\n" + "Imperial Ship Subtype: " + Advanced.getImperialSubType() + "\n" + "(Testing getImperialWeaponry)" + "\n" + "Imperial Secondary Weaponry: " + Advanced.getImperialWeaponry() + "\n");
 		
 		//Imperial Specifics
 		Advanced.setImperialSpecifics("fighter", "Force control");
@@ -50,7 +57,7 @@ public class TestMain {
 		//A wrong Rebel Specific
 		Ywing.setRebelWingConfig("sideways");
 		Ywing.setRebelDroidName("r3-d1");
-		System.out.println("(Testing setRebelDroidName + setRebelWingConfiguration)" + "\n" + "Rebel Ship Wing Config: " + Ywing.getRebelWingConfiguration() + "\n" + "(Testing getRebelDroidName)" + "\n" + "Rebel Astro Droid Name: " + Ywing.getRebelDroidName() + "\n");
+		System.out.println("(Testing setRebelDroidName + setRebelWingConfiguration with wrong input to correct later using setRebelSpecifics)" + "\n" + "Rebel Ship Wing Config: " + Ywing.getRebelWingConfiguration() + "\n" + "(Testing getRebelDroidName)" + "\n" + "Rebel Astro Droid Name: " + Ywing.getRebelDroidName() + "\n");
 		
 		//Rebel Specifics
 		Xwing.setRebelSpecifics("split", "R5-D1");
@@ -65,14 +72,15 @@ public class TestMain {
 		System.out.println("\n" + "(Testing toString of Rebel Ship)" + "\n" + Ywing.toString());
 		System.out.println("\n" + "(Testing firePrimaryWeapon of Rebel Ship)" + "\n" + Ywing.firePrimaryWeapon());
 		
-		//
+		//testing polymorphism 
 		Spaceship Enterprise;
 		Enterprise = new ImperialShip("Enterprise", 10);
 		System.out.println("\n" + "(testing polymorphism)" + "\n" + Enterprise.firePrimaryWeapon());
 		Enterprise = new RebelShip("Ze Enterprise", 10);
-		System.out.println(Enterprise.firePrimaryWeapon());
-		
-		System.out.println(Starfighter.fireSecondaryWeapon());
+		System.out.println(Enterprise.firePrimaryWeapon() + "\n");
+				
+		//Testing Imperials secondary weaponry
+		System.out.println("(testing ImperialShips fireSecondaryWeapon)" + "\n" + Starfighter.fireSecondaryWeapon());
 		System.out.println(Advanced.fireSecondaryWeapon());
 
 	}
